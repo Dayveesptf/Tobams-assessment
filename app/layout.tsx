@@ -7,7 +7,7 @@ import Providers from './providers'
 const inter = Exo_2({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '3D Todo List',
+  title: 'Task Manager',
   description: 'A todo list with a 3D twist',
 }
 

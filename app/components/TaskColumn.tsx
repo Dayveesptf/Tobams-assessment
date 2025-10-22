@@ -3,6 +3,7 @@
 import React from 'react';
 import TaskCard from './TaskCard';
 import { Todo } from '../context';
+import Image from 'next/image';
 
 interface TaskColumnProps {
   title: string;
@@ -43,8 +44,8 @@ const TaskColumn: React.FC<TaskColumnProps> = ({ title, count, tasks, status, on
               {count}
             </span>
           </div>
-          <span className="flex gap-2 justify-between font-bold items-center text-sm font-medium text-black dark:text-white cursor-pointer">
-            <img src="/add.svg" alt="Add task" className="w-5 h-5 dark:invert" />
+          <span className="flex gap-2 justify-between font-bold items-center text-sm text-black dark:text-white cursor-pointer">
+            <Image src="/add.svg" alt="Add task" width={20} height={20} className="dark:invert" />
             <h1 className='font-bold'>Add new task</h1>
           </span>
         </div>
@@ -69,7 +70,7 @@ const TaskColumn: React.FC<TaskColumnProps> = ({ title, count, tasks, status, on
           onDragOver={handleDragOver}
           onDrop={handleDropboxDrop}
         >
-          <div className="h-35 flex items-center text-center border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6  transition-colors cursor-pointer">
+          <div className="h-35 flex items-center text-center border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-6 transition-colors cursor-pointer">
             <div className="flex mx-auto items-center justify-center text-center space-y-2">
               <p className="text-gray-500 text-center dark:text-gray-400 font-semibold text-sm">
                 Drag your task here

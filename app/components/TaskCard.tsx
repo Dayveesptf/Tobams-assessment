@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Todo } from '../context';
 import CubeWidget from './CubeWidget';
+import Image from 'next/image';
 
 interface TaskCardProps {
   task: Todo;
@@ -66,6 +67,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
   useEffect(() => {
     setMounted(true);
     setProgress(getProgress());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, task.id]);
 
   if (!mounted) {
@@ -80,7 +82,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
             {task.text}
           </h4>
           <div className="border-gray-200 dark:border-gray-700 px-3 py-4 border-2 rounded-full">
-            <img src="/dots.svg" alt="Options" className="dark:invert" />
+            <Image src="/dots.svg" alt="Options" width={20} height={20} className="dark:invert" />
           </div>
         </div>
         
@@ -90,7 +92,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
         
         <div className="flex items-center justify-between text-sm mb-2">
           <span className="text-gray-500 dark:text-gray-500 flex justify-between items-center gap-2">
-            <img src="./bars.svg" alt="" className='h-4 w-4 dark:invert'/>
+            <Image src="/bars.svg" alt="" width={16} height={16} className="dark:invert" />
             Progress
             <CubeWidget status={status} />
           </span>
@@ -107,9 +109,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
           </span>
           <div className="flex space-x-1 justify-end">
             {isEvenId ? (
-              <img src="./Items.svg" alt="Even ID" className="w-20 h-7 dark:invert" />
+              <Image src="/Items.svg" alt="Even ID" width={80} height={28} className="dark:invert" />
             ) : (
-              <img src="./Right.svg" alt="Odd ID" className="w-20 h-7 dark:invert" />
+              <Image src="/Right.svg" alt="Odd ID" width={80} height={28} className="dark:invert" />
             )}
           </div>
         </div>
@@ -128,7 +130,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
           {task.text}
         </h4>
         <div className="border-gray-200 dark:border-gray-700 px-3 py-4 border-2 rounded-full">
-          <img src="/dots.svg" alt="Options" className="dark:invert" />
+          <Image src="/dots.svg" alt="Options" width={20} height={20} className="dark:invert" />
         </div>
       </div>
       
@@ -138,7 +140,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
       
       <div className="flex items-center justify-between text-sm mb-2">
         <span className="text-gray-500 dark:text-gray-500 flex justify-between items-center gap-2">
-          <img src="./bars.svg" alt="" className='h-4 w-4 dark:invert'/>
+          <Image src="/bars.svg" alt="" width={16} height={16} className="dark:invert" />
           Progress
           <CubeWidget status={status} />
         </span>
@@ -158,9 +160,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, status }) => {
         </span>
         <div className="flex space-x-1 justify-end">
           {isEvenId ? (
-            <img src="./Items.svg" alt="Even ID" className="w-20 h-7" />
+            <Image src="/Items.svg" alt="Even ID" width={80} height={28} className="dark:invert" />
           ) : (
-            <img src="./Right.svg" alt="Odd ID" className="w-20 h-7 dark:invert" />
+            <Image src="/Right.svg" alt="Odd ID" width={80} height={28} className="dark:invert" />
           )}
         </div>
       </div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import TaskColumn from './TaskColumn';
 import { useTodo } from '../context';
+import Image from 'next/image';
 
 const Dashboard: React.FC = () => {
   const { todos, moveTodo } = useTodo();
@@ -25,21 +26,21 @@ const Dashboard: React.FC = () => {
         </h1>
         <div className='flex gap-7 justify-between items-center'>
           <div>
-            <img src="./search.svg" alt="Search" className="dark:invert" />
+            <Image src="/search.svg" alt="Search" width={20} height={20} className="dark:invert" />
           </div>
           <div>
-            <img src="./notifications.svg" alt="Notifications" className="dark:invert" />
+            <Image src="/notifications.svg" alt="Notifications" width={20} height={20} className="dark:invert" />
           </div>
           <div className='flex gap-1 justify-between items-center'>
             <div>
-              <img src="./calender.svg" alt="Calendar" className="dark:invert" />
+              <Image src="/calender.svg" alt="Calendar" width={20} height={20} className="dark:invert" />
             </div>
             <div>
               <h1 className='text-gray-400 dark:text-gray-500 font-semibold'>19 May 2022</h1>
             </div>
           </div>
           <div>
-            <img src="./profile.svg" alt="Profile" className="" />
+            <Image src="/profile.svg" alt="Profile" width={20} height={20} />
           </div>
         </div>
       </div>
@@ -47,11 +48,11 @@ const Dashboard: React.FC = () => {
       <div className="flex items-center justify-between mb-2 border-b border-gray-300 dark:border-gray-700">
         <div className="flex">
           <button className="flex justify-between px-5 gap-2 py-4 border-b-2 border-black dark:border-white">
-            <img src="./board.svg" alt="Board view" className="dark:invert" />
+            <Image src="/board.svg" alt="Board view" width={20} height={20} className="dark:invert" />
             <h1 className='font-bold text-[15px] text-black dark:text-white'>Board view</h1>
           </button>
           <button className="flex justify-between w-36 px-5 gap-2 py-4">
-            <img src="./add.svg" alt="Add view" className="dark:invert" />
+            <Image src="/add.svg" alt="Add view" width={20} height={20} className="dark:invert" />
             <h1 className='font-bold text-gray-500 dark:text-gray-400 text-[15px]'>Add view</h1>
           </button>
         </div>
@@ -64,7 +65,7 @@ const Dashboard: React.FC = () => {
             Sort
           </button>
           <button className='px-3 py-4 border border-gray-300 dark:border-gray-600 rounded-full'>
-            <img src="./dots.svg" alt="More options" className="dark:invert" />
+            <Image src="/dots.svg" alt="More options" width={20} height={20} className="dark:invert" />
           </button>
           <button className='bg-black dark:bg-white px-5 py-2 rounded-2xl'>
             <h1 className='text-white dark:text-black text-[13px]'>New template</h1>

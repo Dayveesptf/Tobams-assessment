@@ -4,7 +4,7 @@ A sleek, modern task management dashboard built with Next.js, TypeScript, and Ta
 
 ##  Live Demo
 
-**[Deployed on Vercel]** - [Add your Vercel deployment URL here]
+**[Deployed on Vercel]** - (https://tobams-assessment.vercel.app/)
 
 ##  Technologies Used
 

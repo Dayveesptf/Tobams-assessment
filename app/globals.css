@@ -1,42 +1,106 @@
+@import "tailwindcss";
+
+/* Light mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark mode */
+html.dark {
+  --color-bg: #1f1f1f;
+  --color-text: #f9fafb;
+  --color-border: #374151;
+  --color-muted: #9ca3af;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html.dark .dark\:bg-gray-800 {
+  background-color: var(--color-bg) !important;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html.dark .dark\:bg-gray-700 {
+  background-color: #292828 !important;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html.dark .dark\:bg-gray-600 {
+  background-color: #323232 !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html.dark .dark\:bg-gray-900 {
+  background-color: #212121 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html.dark .dark\:text-white {
+  color: var(--color-text) !important;
+}
+
+html.dark .dark\:text-gray-300 {
+  color: #d1d5db !important;
+}
+
+html.dark .dark\:text-gray-400 {
+  color: var(--color-muted) !important;
+}
+
+html.dark .dark\:text-gray-500 {
+  color: #6b7280 !important;
+}
+
+html.dark .dark\:border-gray-700 {
+  border-color: var(--color-border) !important;
+}
+
+html.dark .dark\:border-gray-600 {
+  border-color: #4b5563 !important;
+}
+
+html.dark .dark\:hover\:text-gray-200:hover {
+  color: #e5e7eb !important;
+}
+
+html.dark .dark\:hover\:text-white:hover {
+  color: #ffffff !important;
+}
+
+html.dark .dark\:bg-gray-100 {
+  background-color: #374151 !important;
+}
+
+html.dark .dark\:bg-gray-200 {
+  background-color: #2d2d2d !important;
+}
+
+html.dark .dark\:bg-gray-50 {
+  background-color: #374151 !important;
+}
+
+html.dark .dark\:invert {
+  filter: invert(1) !important;
+}
+
+.scrollbar-dark::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #242424;
+  border-radius: 3px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+html.dark .scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+html.dark .scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
 }

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const LinksBar: React.FC = () => {
   return (
-    <div className="w-16 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 min-h-screen py-6 flex flex-col items-center">
+    <div className="w-16 bg-gray-800 border-r border-gray-900 min-h-screen py-6 flex flex-col items-center">
       <div className="flex flex-col items-center space-y-4">
         <button className="p-2 rounded-lg hover:bg-gray-800 w-10 h-10">
           <Image 
